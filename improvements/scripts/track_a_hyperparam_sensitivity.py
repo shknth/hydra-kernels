@@ -125,35 +125,59 @@ def main():
 
             for k in k_values:
                 for g in g_values:
-                    acc, t_transform, t_fit, t_predict, cv_mode = run_once(
-                        X_tr, y_tr, X_te, y_te, k, g
-                    )
+                    try:
+                        acc, t_transform, t_fit, t_predict, cv_mode = run_once(
+                            X_tr, y_tr, X_te, y_te, k, g
+                        )
 
-                    record = {
-                        "dataset": dataset,
-                        "resample": r,
-                        "k": k,
-                        "g": g,
-                        "accuracy": round(acc, 6),
-                        "transform_time_sec": round(t_transform, 4),
-                        "fit_time_sec": round(t_fit, 4),
-                        "predict_time_sec": round(t_predict, 4),
-                        "cv_mode": cv_mode,
-                    }
+                        record = {
+                            "dataset": dataset,
+                            "resample": r,
+                            "k": k,
+                            "g": g,
+                            "accuracy": round(acc, 6),
+                            "transform_time_sec": round(t_transform, 4),
+                            "fit_time_sec": round(t_fit, 4),
+                            "predict_time_sec": round(t_predict, 4),
+                            "cv_mode": cv_mode,
+                            "status": "ok",
+                            "error": "",
+                        }
+
+                        print(
+                            f"{dataset} r={r} k={k} g={g} "
+                            f"acc={acc:.4f} t={t_transform+t_fit+t_predict:.2f}s"
+                        )
+                    except Exception as e:
+                        record = {
+                            "dataset": dataset,
+                            "resample": r,
+                            "k": k,
+                            "g": g,
+                            "accuracy": np.nan,
+                            "transform_time_sec": np.nan,
+                            "fit_time_sec": np.nan,
+                            "predict_time_sec": np.nan,
+                            "cv_mode": "error",
+                            "status": "failed",
+                            "error": str(e),
+                        }
+                        print(f"[WARN] {dataset} r={r} k={k} g={g} failed: {e}")
+
                     rows.append(record)
 
                     out_path = raw_dir / f"{dataset}_k{k}_g{g}_r{r}.json"
                     with out_path.open("w", encoding="utf-8") as f:
                         json.dump(record, f, indent=2)
 
-                    print(
-                        f"{dataset} r={r} k={k} g={g} "
-                        f"acc={acc:.4f} t={t_transform+t_fit+t_predict:.2f}s"
-                    )
-
     df = pd.DataFrame(rows)
+    ok_df = df[df["status"] == "ok"].copy()
+
+    if ok_df.empty:
+        raise RuntimeError("No successful runs were completed in Track A.")
+
     summary = (
-        df.groupby(["dataset", "k", "g"], as_index=False)
+        ok_df.groupby(["dataset", "k", "g"], as_index=False)
         .agg(
             mean_accuracy=("accuracy", "mean"),
             std_accuracy=("accuracy", "std"),
@@ -164,8 +188,11 @@ def main():
         .sort_values(["dataset", "mean_accuracy"], ascending=[True, False])
     )
 
+    raw_rows_path = analysis_dir / "track_a_raw_rows.csv"
     summary_path = analysis_dir / "track_a_summary.csv"
+    df.to_csv(raw_rows_path, index=False)
     summary.to_csv(summary_path, index=False, float_format="%.6f")
+    print(f"Saved raw rows: {raw_rows_path}")
     print(f"Saved summary: {summary_path}")
 
 

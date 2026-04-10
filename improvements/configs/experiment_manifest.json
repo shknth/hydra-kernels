@@ -6,9 +6,9 @@
     "track_a_hyperparam_sensitivity": {
       "enabled": true,
       "description": "Hydra hyperparameter sensitivity on k and g",
-      "k_values": [4, 8, 16],
-      "g_values": [32, 64, 128],
-      "resamples": 3,
+      "k_values": [4, 8],
+      "g_values": [32, 64],
+      "resamples": 1,
       "max_local_datasets": 3,
       "max_full_datasets": 10
     },
