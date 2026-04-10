@@ -33,6 +33,26 @@ We evaluate three improvement tracks:
 
 Run from repository root after installing dependencies from `reproduction/requirements.txt`.
 
+## Mode Toggle (Pilot vs Full)
+
+Use `improvements/configs/experiment_manifest.json`:
+
+```json
+"execution_mode": {
+  "full_run": false
+}
+```
+
+- Set `full_run` to `false` for local pilot runs.
+- Set `full_run` to `true` for full runs on a higher-end machine.
+
+When running, scripts print selected mode at startup:
+
+- `[MODE] ... running in PILOT mode`
+- `[MODE] ... running in FULL mode`
+
+Track A and Track C also print selected subset/resamples (and Track A prints k/g values), so you can verify config before long runs.
+
 ### 1) Local Pilot (validation run)
 
 ```bash
@@ -44,7 +64,7 @@ python improvements/scripts/merge_improvement_summaries.py
 
 ### 2) Full Improvement Run
 
-Use the same scripts with a larger dataset subset and/or resample count by editing `improvements/configs/experiment_manifest.json`.
+Set `execution_mode.full_run=true` in the manifest, then run the same commands.
 
 Optional orchestrated run:
 

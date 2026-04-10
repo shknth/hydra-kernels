@@ -122,8 +122,16 @@ def main():
     manifest = load_manifest()
     cfg = manifest["tracks"]["track_c_timing_quality"]
 
-    datasets = manifest["dataset_subsets"]["local_pilot"][: cfg["max_local_datasets"]]
-    resamples = int(cfg["resamples"])
+    full_run = bool(manifest.get("execution_mode", {}).get("full_run", False))
+    mode = "FULL" if full_run else "PILOT"
+
+    subset_key = "full_run_recommended" if full_run else "local_pilot"
+    max_datasets = cfg["max_full_datasets"] if full_run else cfg["max_local_datasets"]
+    datasets = manifest["dataset_subsets"][subset_key][:max_datasets]
+    resamples = int(cfg.get("full_resamples", cfg["resamples"])) if full_run else int(cfg["resamples"])
+
+    print(f"[MODE] Track C running in {mode} mode")
+    print(f"[MODE] datasets={len(datasets)} subset={subset_key} resamples={resamples}")
 
     raw_dir = REPO_ROOT / "improvements" / "outputs" / "track_c"
     analysis_dir = REPO_ROOT / "improvements" / "analysis" / "track_c"

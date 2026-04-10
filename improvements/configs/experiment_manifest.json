@@ -2,6 +2,9 @@
   "project": "hydra-kernels-improvements",
   "version": "1.0",
   "created": "2026-04-10",
+  "execution_mode": {
+    "full_run": false
+  },
   "tracks": {
     "track_a_hyperparam_sensitivity": {
       "enabled": true,
@@ -10,7 +13,10 @@
       "g_values": [32, 64],
       "resamples": 1,
       "max_local_datasets": 3,
-      "max_full_datasets": 10
+      "full_k_values": [4, 8, 16],
+      "full_g_values": [32, 64, 128],
+      "full_resamples": 3,
+      "max_full_datasets": 50
     },
     "track_b_variant_analysis": {
       "enabled": true,
@@ -26,22 +32,63 @@
       "description": "Split transform/fit/predict timing and assess trade-offs",
       "resamples": 3,
       "max_local_datasets": 3,
+      "full_resamples": 10,
       "max_full_datasets": 10
     }
   },
   "dataset_subsets": {
     "local_pilot": ["GunPoint", "Adiac", "ElectricDevices"],
     "full_run_recommended": [
-      "GunPoint",
+      "ACSF1",
       "Adiac",
+      "ArrowHead",
+      "BME",
+      "Beef",
+      "BeetleFly",
+      "BirdChicken",
+      "CBF",
+      "Car",
+      "Chinatown",
+      "ChlorineConcentration",
+      "CinCECGTorso",
+      "Coffee",
+      "Computers",
+      "CricketX",
+      "CricketY",
+      "CricketZ",
+      "Crop",
+      "DiatomSizeReduction",
+      "DistalPhalanxOutlineAgeGroup",
+      "DistalPhalanxOutlineCorrect",
+      "DistalPhalanxTW",
+      "ECG200",
+      "ECG5000",
+      "ECGFiveDays",
+      "EOGHorizontalSignal",
+      "EOGVerticalSignal",
+      "Earthquakes",
       "ElectricDevices",
+      "EthanolLevel",
+      "FaceAll",
+      "FaceFour",
+      "FacesUCR",
+      "FiftyWords",
+      "Fish",
       "FordA",
       "FordB",
-      "Crop",
-      "FaceFour",
+      "FreezerRegularTrain",
+      "FreezerSmallTrain",
+      "GunPoint",
+      "GunPointAgeSpan",
+      "GunPointMaleVersusFemale",
+      "GunPointOldVersusYoung",
+      "Ham",
+      "HandOutlines",
+      "Haptics",
+      "Herring",
+      "HouseTwenty",
       "InlineSkate",
-      "ECG5000",
-      "ChlorineConcentration"
+      "InsectEPGRegularTrain"
     ]
   },
   "runtime_policy": {

@@ -44,6 +44,10 @@ def run_script(script_name: str) -> int:
 def main() -> int:
     manifest = load_manifest(MANIFEST_PATH)
     tracks_cfg = manifest.get("tracks", {})
+    full_run = bool(manifest.get("execution_mode", {}).get("full_run", False))
+    mode = "FULL" if full_run else "PILOT"
+
+    print(f"[MODE] Improvements orchestrator running in {mode} mode")
 
     enabled_tracks = [
         track_name
