@@ -1,0 +1,63 @@
+{
+  "project": "hydra-kernels-improvements",
+  "version": "1.0",
+  "created": "2026-04-10",
+  "tracks": {
+    "track_a_hyperparam_sensitivity": {
+      "enabled": true,
+      "description": "Hydra hyperparameter sensitivity on k and g",
+      "k_values": [4, 8, 16],
+      "g_values": [32, 64, 128],
+      "resamples": 3,
+      "max_local_datasets": 3,
+      "max_full_datasets": 10
+    },
+    "track_b_variant_analysis": {
+      "enabled": true,
+      "description": "Analyze existing Hydra+ROCKET-family results vs Hydra baseline",
+      "resamples": 30,
+      "source_files": {
+        "hydra": "results/results_ucr112_hydra.csv",
+        "variants": "results/results_ucr112_variants.csv"
+      }
+    },
+    "track_c_timing_quality": {
+      "enabled": true,
+      "description": "Split transform/fit/predict timing and assess trade-offs",
+      "resamples": 3,
+      "max_local_datasets": 3,
+      "max_full_datasets": 10
+    }
+  },
+  "dataset_subsets": {
+    "local_pilot": ["GunPoint", "Adiac", "ElectricDevices"],
+    "full_run_recommended": [
+      "GunPoint",
+      "Adiac",
+      "ElectricDevices",
+      "FordA",
+      "FordB",
+      "Crop",
+      "FaceFour",
+      "InlineSkate",
+      "ECG5000",
+      "ChlorineConcentration"
+    ]
+  },
+  "runtime_policy": {
+    "local_machine": {
+      "role": "validation_only",
+      "max_hours": 5,
+      "notes": "Run smoke and pilot only on 16GB RAM laptop."
+    },
+    "full_training": {
+      "role": "full_compute",
+      "notes": "Run full experiment matrix on Mac M4 Pro."
+    }
+  },
+  "output_policy": {
+    "raw_root": "improvements/outputs",
+    "analysis_root": "improvements/analysis",
+    "master_summary": "improvements/analysis/improvements_master_summary.csv"
+  }
+}
