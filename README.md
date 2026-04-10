@@ -2,10 +2,9 @@
 
 # HYDRA
 
-***HYDRA: Competing convolutional kernels for fast and accurate time series classification***
+**_HYDRA: Competing convolutional kernels for fast and accurate time series classification_**
 
 [Data Mining and Knowledge Discovery](https://doi.org/10.1007/s10618-023-00939-3) / [arXiv:2203.13652](https://arxiv.org/abs/2203.13652) (preprint)
-
 
 > <div align="justify">We demonstrate a simple connection between dictionary methods for time series classification, which involve extracting and counting symbolic patterns in time series, and methods based on transforming input time series using convolutional kernels, namely ROCKET and its variants.  We show that by adjusting a single hyperparameter it is possible to move by degrees between models resembling dictionary methods and models resembling ROCKET.  We present HYDRA, a simple, fast, and accurate dictionary method for time series classification using competing convolutional kernels, combining key aspects of both ROCKET and conventional dictionary methods.  HYDRA is faster and more accurate than the most accurate existing dictionary methods, and can be combined with ROCKET and its variants to further improve the accuracy of these methods.</div>
 
@@ -26,24 +25,75 @@ Please cite as:
 
 #### UCR Archive (112 Datasets, 30 Resamples)
 
-* [Hydra](./results/results_ucr112_hydra.csv)
-* [Hydra+MiniRocket, Hydra+MultiRocket, Hydra+Rocket](./results/results_ucr112_variants.csv)
+- [Hydra](./results/results_ucr112_hydra.csv)
+- [Hydra+MiniRocket, Hydra+MultiRocket, Hydra+Rocket](./results/results_ucr112_variants.csv)
 
 ## Requirements
 
-* Python
-* PyTorch
-* NumPy
-* scikit-learn (or similar)
+- Python
+- PyTorch
+- NumPy
+- scikit-learn (or similar)
+
+## Project Reproduction and Improvements
+
+This repository includes a reproducibility pipeline and three improvement tracks for project evaluation.
+
+### Baseline Reproduction
+
+1. Install dependencies:
+
+```bash
+pip install -r reproduction/requirements.txt
+```
+
+2. Optional preflight check:
+
+```bash
+python reproduction/smoke_test.py
+```
+
+3. Download datasets:
+
+```bash
+python reproduction/download_datasets.py
+```
+
+4. Run baseline reproduction:
+
+```bash
+python reproduction/run_reproduction.py
+```
+
+5. Compare against published Hydra results:
+
+```bash
+python reproduction/compare_results.py
+```
+
+### Improvements Workflow
+
+Improvement configuration and outputs are in the `improvements/` folder.
+
+Run all enabled tracks:
+
+```bash
+python improvements/scripts/run_improvements.py
+python improvements/scripts/merge_improvement_summaries.py
+```
+
+For details, see [improvements/README.md](./improvements/README.md).
 
 ## Code
 
 ### [`hydra.py`](./code/hydra.py)
+
 ### [`hydra_multivariate.py`](./code/hydra_multivariate.py)&#8224;
+
 ### [`softmax.py`](./code/softmax.py)\*
 
-&#8224; *experimental*  
-\* *Hydra + SGD for larger datasets (i.e., more than approx. 10,000 training examples)*
+&#8224; _experimental_  
+\* _Hydra + SGD for larger datasets (i.e., more than approx. 10,000 training examples)_
 
 ## Examples
 
@@ -71,6 +121,6 @@ predictions = classifier.predict(X_test_transform)
 
 ## Acknowledgements
 
-We thank Professor Eamonn Keogh and all the people who have contributed to the UCR time series classification archive.  Figures in our paper showing mean ranks were produced using code from [Ismail Fawaz et al. (2019)](https://github.com/hfawaz/cd-diagram).
+We thank Professor Eamonn Keogh and all the people who have contributed to the UCR time series classification archive. Figures in our paper showing mean ranks were produced using code from [Ismail Fawaz et al. (2019)](https://github.com/hfawaz/cd-diagram).
 
 <div align="center">:dragon_face:</div>
