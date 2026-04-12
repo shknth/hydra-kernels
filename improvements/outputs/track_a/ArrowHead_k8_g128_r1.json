@@ -1,0 +1,13 @@
+{
+  "dataset": "ArrowHead",
+  "resample": 1,
+  "k": 8,
+  "g": 128,
+  "accuracy": 0.731429,
+  "transform_time_sec": 0.9143,
+  "fit_time_sec": 0.0119,
+  "predict_time_sec": 0.006,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

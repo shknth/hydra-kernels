@@ -1,0 +1,13 @@
+{
+  "dataset": "EthanolLevel",
+  "resample": 2,
+  "k": 8,
+  "g": 64,
+  "accuracy": 0.698,
+  "transform_time_sec": 16.193,
+  "fit_time_sec": 0.5916,
+  "predict_time_sec": 0.0046,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

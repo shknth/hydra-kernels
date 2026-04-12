@@ -1,0 +1,13 @@
+{
+  "dataset": "DiatomSizeReduction",
+  "resample": 1,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.938111,
+  "transform_time_sec": 1.145,
+  "fit_time_sec": 0.0078,
+  "predict_time_sec": 0.0059,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

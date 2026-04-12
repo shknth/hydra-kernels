@@ -1,0 +1,13 @@
+{
+  "dataset": "DistalPhalanxTW",
+  "resample": 0,
+  "k": 8,
+  "g": 32,
+  "accuracy": 0.690647,
+  "transform_time_sec": 0.3635,
+  "fit_time_sec": 0.5744,
+  "predict_time_sec": 0.0008,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

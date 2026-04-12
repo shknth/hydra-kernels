@@ -1,0 +1,13 @@
+{
+  "dataset": "GunPoint",
+  "resample": 0,
+  "k": 8,
+  "g": 128,
+  "accuracy": 1.0,
+  "transform_time_sec": 0.6436,
+  "fit_time_sec": 0.0492,
+  "predict_time_sec": 0.016,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

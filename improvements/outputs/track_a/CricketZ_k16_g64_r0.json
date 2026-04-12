@@ -1,0 +1,13 @@
+{
+  "dataset": "CricketZ",
+  "resample": 0,
+  "k": 16,
+  "g": 64,
+  "accuracy": 0.810256,
+  "transform_time_sec": 3.8873,
+  "fit_time_sec": 1.385,
+  "predict_time_sec": 0.0135,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

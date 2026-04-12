@@ -1,0 +1,13 @@
+{
+  "dataset": "FaceAll",
+  "resample": 2,
+  "k": 8,
+  "g": 128,
+  "accuracy": 0.990533,
+  "transform_time_sec": 5.3383,
+  "fit_time_sec": 0.6074,
+  "predict_time_sec": 0.0222,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

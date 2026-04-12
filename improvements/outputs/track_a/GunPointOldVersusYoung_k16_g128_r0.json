@@ -1,0 +1,13 @@
+{
+  "dataset": "GunPointOldVersusYoung",
+  "resample": 0,
+  "k": 16,
+  "g": 128,
+  "accuracy": 1.0,
+  "transform_time_sec": 2.0928,
+  "fit_time_sec": 0.5489,
+  "predict_time_sec": 0.0053,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

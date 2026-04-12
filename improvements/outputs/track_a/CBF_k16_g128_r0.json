@@ -1,0 +1,13 @@
+{
+  "dataset": "CBF",
+  "resample": 0,
+  "k": 16,
+  "g": 128,
+  "accuracy": 0.99,
+  "transform_time_sec": 3.0153,
+  "fit_time_sec": 0.0186,
+  "predict_time_sec": 0.0182,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

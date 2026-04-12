@@ -1,0 +1,13 @@
+{
+  "dataset": "ECGFiveDays",
+  "resample": 1,
+  "k": 4,
+  "g": 64,
+  "accuracy": 0.997677,
+  "transform_time_sec": 0.9812,
+  "fit_time_sec": 0.0114,
+  "predict_time_sec": 0.0102,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

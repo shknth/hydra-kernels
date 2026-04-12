@@ -1,0 +1,13 @@
+{
+  "dataset": "BirdChicken",
+  "resample": 2,
+  "k": 8,
+  "g": 64,
+  "accuracy": 0.9,
+  "transform_time_sec": 0.3709,
+  "fit_time_sec": 0.0112,
+  "predict_time_sec": 0.0101,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

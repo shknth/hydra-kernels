@@ -1,0 +1,13 @@
+{
+  "dataset": "ElectricDevices",
+  "resample": 0,
+  "k": 8,
+  "g": 64,
+  "accuracy": 0.728829,
+  "transform_time_sec": 15.4343,
+  "fit_time_sec": 47.1761,
+  "predict_time_sec": 0.0971,
+  "cv_mode": "cv5",
+  "status": "ok",
+  "error": ""
+}

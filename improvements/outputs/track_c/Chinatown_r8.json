@@ -1,0 +1,10 @@
+{
+  "dataset": "Chinatown",
+  "resample": 8,
+  "accuracy": 0.979592,
+  "transform_time_sec": 0.159806,
+  "fit_time_sec": 0.030625,
+  "predict_time_sec": 0.004495,
+  "total_time_sec": 0.194926,
+  "cv_mode": "loo"
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "FordB",
+  "resample": 2,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.932182,
+  "transform_time_sec": 19.7723,
+  "fit_time_sec": 45.5577,
+  "predict_time_sec": 0.0261,
+  "cv_mode": "cv5",
+  "status": "ok",
+  "error": ""
+}

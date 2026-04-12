@@ -1,0 +1,13 @@
+{
+  "dataset": "DistalPhalanxOutlineCorrect",
+  "resample": 0,
+  "k": 4,
+  "g": 32,
+  "accuracy": 0.76087,
+  "transform_time_sec": 0.3696,
+  "fit_time_sec": 0.6039,
+  "predict_time_sec": 0.0018,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

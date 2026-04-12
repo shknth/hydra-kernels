@@ -1,0 +1,13 @@
+{
+  "dataset": "ECG5000",
+  "resample": 2,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.945556,
+  "transform_time_sec": 6.9241,
+  "fit_time_sec": 0.5713,
+  "predict_time_sec": 0.0135,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

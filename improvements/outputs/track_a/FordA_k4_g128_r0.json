@@ -1,0 +1,13 @@
+{
+  "dataset": "FordA",
+  "resample": 0,
+  "k": 4,
+  "g": 128,
+  "accuracy": 0.961364,
+  "transform_time_sec": 25.2095,
+  "fit_time_sec": 43.4675,
+  "predict_time_sec": 0.0103,
+  "cv_mode": "cv5",
+  "status": "ok",
+  "error": ""
+}

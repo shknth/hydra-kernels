@@ -1,0 +1,13 @@
+{
+  "dataset": "FaceFour",
+  "resample": 2,
+  "k": 16,
+  "g": 64,
+  "accuracy": 0.931818,
+  "transform_time_sec": 0.8284,
+  "fit_time_sec": 0.0122,
+  "predict_time_sec": 0.0039,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

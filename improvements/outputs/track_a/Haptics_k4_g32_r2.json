@@ -1,0 +1,13 @@
+{
+  "dataset": "Haptics",
+  "resample": 2,
+  "k": 4,
+  "g": 32,
+  "accuracy": 0.487013,
+  "transform_time_sec": 1.7143,
+  "fit_time_sec": 0.5259,
+  "predict_time_sec": 0.0128,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

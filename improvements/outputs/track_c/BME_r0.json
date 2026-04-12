@@ -1,0 +1,10 @@
+{
+  "dataset": "BME",
+  "resample": 0,
+  "accuracy": 1.0,
+  "transform_time_sec": 0.393581,
+  "fit_time_sec": 0.021942,
+  "predict_time_sec": 0.009789,
+  "total_time_sec": 0.425312,
+  "cv_mode": "loo"
+}

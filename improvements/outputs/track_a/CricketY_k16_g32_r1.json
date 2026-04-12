@@ -1,0 +1,13 @@
+{
+  "dataset": "CricketY",
+  "resample": 1,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.807692,
+  "transform_time_sec": 2.2834,
+  "fit_time_sec": 0.5737,
+  "predict_time_sec": 0.0044,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

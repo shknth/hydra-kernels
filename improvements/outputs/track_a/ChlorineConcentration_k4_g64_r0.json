@@ -1,0 +1,13 @@
+{
+  "dataset": "ChlorineConcentration",
+  "resample": 0,
+  "k": 4,
+  "g": 64,
+  "accuracy": 0.699479,
+  "transform_time_sec": 4.6968,
+  "fit_time_sec": 0.592,
+  "predict_time_sec": 0.0077,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

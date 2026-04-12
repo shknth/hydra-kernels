@@ -1,0 +1,13 @@
+{
+  "dataset": "EOGVerticalSignal",
+  "resample": 1,
+  "k": 8,
+  "g": 64,
+  "accuracy": 0.776243,
+  "transform_time_sec": 8.283,
+  "fit_time_sec": 0.5625,
+  "predict_time_sec": 0.0028,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "HandOutlines",
+  "resample": 2,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.959459,
+  "transform_time_sec": 32.6378,
+  "fit_time_sec": 0.7227,
+  "predict_time_sec": 0.0038,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

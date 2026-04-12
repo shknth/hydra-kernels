@@ -1,0 +1,13 @@
+{
+  "dataset": "InsectEPGRegularTrain",
+  "resample": 0,
+  "k": 16,
+  "g": 128,
+  "accuracy": 1.0,
+  "transform_time_sec": 5.595,
+  "fit_time_sec": 0.0295,
+  "predict_time_sec": 0.0208,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}
