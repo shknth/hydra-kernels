@@ -29,22 +29,24 @@
 Kernels for Time Series Classification}
 
 % TODO: Replace placeholders below with real author info
-\author{
-\IEEEauthorblockN{\{Author Name 1\}}
-\IEEEauthorblockA{
-  \textit{\{Department\}}\\
-  \textit{University College Dublin}\\
-  Dublin, Ireland \\
-  \{email1@ucd.ie\}}
+\author{\IEEEauthorblockN{Radha Neelamani Josyula}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{University College Dublin}\\
+Dublin, Ireland \\
+radha.josyula@ucdconnect.ie}
 \and
-\IEEEauthorblockN{\{Author Name 2\}}
-\IEEEauthorblockA{
-  \textit{\{Department\}}\\
-  \textit{University College Dublin}\\
-  Dublin, Ireland \\
-  \{email2@ucd.ie\}}
+\IEEEauthorblockN{Ranjitha Kolar Srinivas}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{University College Dublin}\\
+Dublin, Ireland \\
+ranjitha.kolarsrinivas@ucdconnect.ie}
+\and
+\IEEEauthorblockN{Shashikanth Bokka}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{University College Dublin}\\
+Dublina, Ireland \\
+shashikanth.bokka@ucdconnect.ie}
 }
-
 \maketitle
 
 % ============================================================
@@ -531,50 +533,192 @@ GitHub repository, 2026.
 \newpage
 \section*{Work Plan, Division of Labour, and Contributions}
 
-\subsection*{Project Timeline}
+\subsection*{Project Overview and Objectives}
+
+This project was undertaken as a collaborative effort to reproduce and extend
+the Hydra time series classification algorithm. The primary objectives were:
+
+\begin{enumerate}
+  \item \textbf{Baseline Reproduction:} Replicate the published Hydra results
+        on all 112 UCR benchmark datasets with 30 resamples each, ensuring
+        numerical accuracy and documenting deviations.
+  \item \textbf{Reproducibility Documentation:} Systematically identify and
+        document environment setup issues, numerical stability concerns, and
+        methodological deviations encountered during reproduction.
+  \item \textbf{Improvement Experiments:} Design and execute three improvement
+        tracks to evaluate hyperparameter sensitivity, variant combinations,
+        and timing-quality trade-offs.
+  \item \textbf{Knowledge Dissemination:} Produce a publication-ready IEEE
+        report and a public GitHub repository with full reproduction
+        instructions.
+\end{enumerate}
+
+\subsection*{Detailed Project Timeline}
 
 \begin{table}[htbp]
 \begin{center}
-\begin{tabular}{lp{6cm}}
+\begin{tabular}{lp{8.5cm}}
 \toprule
-\textbf{Week} & \textbf{Activity} \\
+\textbf{Phase} & \textbf{Activities and Milestones} \\
 \midrule
-Week 1 & Paper selection, feasibility check, repository setup \\
-Week 2 & Environment setup, dataset download, baseline reproduction run \\
-Week 3 & Improvement track design and implementation (Tracks A, B, C) \\
-Week 4 & Full-run execution, results analysis, figure generation \\
-Week 5 & Report writing, LaTeX assembly, final polishing and submission \\
+\textbf{Week 1} & 
+  \textbullet~Paper selection and feasibility assessment \\
+& \textbullet~Repository initialization and Git workflow setup \\
+& \textbullet~Initial code review and dependency mapping \\
+& \textbullet~Division of labour and timeline planning \\
+\midrule
+\textbf{Week 2} & 
+  \textbullet~Virtual environment setup using \texttt{uv} \\
+& \textbullet~SSL certificate debugging (macOS Python 3.10 fix) \\
+& \textbullet~Dataset download automation (112 UCR datasets) \\
+& \textbullet~Smoke testing on pilot datasets (GunPoint, Adiac, ElectricDevices) \\
+& \textbullet~Baseline reproduction pipeline implementation with checkpointing \\
+& \textbullet~Full 3,360-run baseline execution (17.4 hours wall-clock) \\
+& \textbullet~Result comparison and deviation analysis \\
+\midrule
+\textbf{Week 3} & 
+  \textbullet~Improvement track design and experiment manifest creation \\
+& \textbullet~Track A: Hyperparameter sensitivity script (k, g sweep) \\
+& \textbullet~Track B: Variant analysis script (Hydra + ROCKET family) \\
+& \textbullet~Track C: Timing profiling script (transform/fit/predict breakdown) \\
+& \textbullet~Pilot runs to validate improvement pipeline (3 datasets) \\
+\midrule
+\textbf{Week 4} & 
+  \textbullet~Full improvement experiments execution \\
+& \textbullet~Track A: 1,350 runs across 50 datasets (k/g grid) \\
+& \textbullet~Track B: Analytical comparison using paper's published data \\
+& \textbullet~Track C: Timing profiling on 10 representative datasets \\
+& \textbullet~Results aggregation and summary CSV generation \\
+& \textbullet~Figure generation script development (4 report figures) \\
+\midrule
+\textbf{Week 5} & 
+  \textbullet~Report structure design and section drafting \\
+& \textbullet~LaTeX assembly (IEEE double-column format) \\
+& \textbullet~Figure integration and table formatting \\
+& \textbullet~Cross-verification of all numerical results \\
+& \textbullet~README update with reproduction instructions \\
+& \textbullet~Final proofreading and submission preparation \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-\subsection*{Work Division}
+\subsection*{Work Division by Team Member}
 
-\begin{table}[htbp]
-\begin{center}
-\begin{tabular}{lp{7cm}}
-\toprule
-\textbf{Member} & \textbf{Responsibilities} \\
-\midrule
-% TODO: Replace with actual names and responsibilities
-\{Member A\} & Reproduction pipeline, environment setup, dataset download,
-             baseline runner, notes logging, Track A and C scripts \\
-\{Member B\} & Improvement track design, Track B analysis, full-run execution,
-             report draft, LaTeX assembly, figure generation \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
+\subsubsection*{Shashikanth Bokka — Baseline Reproduction Lead}
+
+\textbf{Primary Responsibilities:}
+\begin{itemize}
+  \item Environment setup, dependency management, and SSL certificate debugging
+  \item Dataset download automation script with retry logic and checksum verification
+  \item Baseline reproduction pipeline design and implementation:
+    \begin{itemize}
+      \item Checkpointed runner supporting restart after interruptions
+      \item Resampling strategy implementation (\texttt{StratifiedShuffleSplit})
+      \item Ridge classifier CV configuration (LOO and cv=5 guard)
+      \item Batch processing for large time series
+    \end{itemize}
+  \item Full 3,360-run baseline execution (112 datasets $\times$ 30 resamples)
+  \item Result comparison script and deviation analysis
+  \item Reproducibility findings documentation in \texttt{reproduction/notes.md}
+  \item Git repository management and branching strategy
+\end{itemize}
+
+\textbf{Key Deliverables:}
+\begin{itemize}
+  \item \texttt{reproduction/} folder with complete pipeline
+  \item 3,360 successful baseline results (0 failures)
+  \item 7 documented reproducibility findings
+  \item Comparison analysis showing 0.74\% mean deviation from published results
+\end{itemize}
+
+\subsubsection*{Radha — Improvement Track A \& C Lead}
+
+\textbf{Primary Responsibilities:}
+\begin{itemize}
+  \item Track A: Hyperparameter sensitivity analysis
+    \begin{itemize}
+      \item Experiment manifest design for k/g sweep
+      \item Script implementation for systematic grid search
+      \item Execution of 1,350 runs (k $\in$ \{4, 8, 16\}, g $\in$ \{32, 64, 128\})
+      \item Heatmap analysis identifying optimal configurations
+    \end{itemize}
+  \item Track C: Timing-quality profiling
+    \begin{itemize}
+      \item Corrected timing measurement implementation (separate transform/fit/predict)
+      \item Profiling of 10 representative datasets
+      \item Bottleneck identification (transform dominates runtime)
+    \end{itemize}
+  \item Summary CSV generation for Tracks A and C
+  \item Contribution to report Section VI (Proposed Improvements)
+\end{itemize}
+
+\textbf{Key Deliverables:}
+\begin{itemize}
+  \item \texttt{track\_a\_hyperparam\_sensitivity.py} script
+  \item \texttt{track\_c\_timing\_quality.py} script
+  \item Track A and C summary CSVs with 1,360 additional experiment runs
+  \item Heatmap and timing breakdown figures (Fig 2 and Fig 4)
+\end{itemize}
+
+\subsubsection*{Ranjitha — Improvement Track B Lead}
+
+\textbf{Primary Responsibilities:}
+\begin{itemize}
+  \item Track B: Variant analysis (Hydra + ROCKET family combinations)
+    \begin{itemize}
+      \item Analytical comparison framework using paper's published data
+      \item Win-rate and mean-delta computation across 112 datasets
+      \item Identification of best-performing combinations (MiniRocket, MultiRocket, Rocket)
+      \item Dataset-specific gain/loss analysis
+    \end{itemize}
+  \item Variant summary CSV generation and validation
+  \item Bar chart visualization design (win rate + mean delta dual-axis)
+  \item Contribution to report Section VI (Variant Analysis subsection)
+\end{itemize}
+
+\textbf{Key Deliverables:}
+\begin{itemize}
+  \item \texttt{track\_b\_variant\_analysis.py} script
+  \item Variant summary CSV with win rates and delta statistics
+  \item Identification of Hydra+MiniRocket as most reliable combination (61.6\% win rate)
+  \item Variant comparison bar chart (Fig 3)
+\end{itemize}
+
+\subsubsection*{Collaborative Work (All Three Members)}
+
+\begin{itemize}
+  \item Weekly progress meetings and task coordination
+  \item Report structure design and section drafting
+  \item Figure generation script (\texttt{generate\_figures.py})
+  \item LaTeX assembly and IEEE formatting
+  \item Cross-verification of all numerical results
+  \item README documentation and reproduction instructions
+  \item Final proofreading and submission preparation
+  \item GitHub repository organization and documentation
+\end{itemize}
 
 \subsection*{Final Contribution Statement}
 
-% TODO: Replace with agreed-upon percentages
 \begin{itemize}
-  \item \textbf{\{Member A\}:} \{XX\}\% --- Reproduction infrastructure,
-        environment debugging, baseline experiments, Track A/C scripts.
-  \item \textbf{\{Member B\}:} \{XX\}\% --- Improvement design, Track B analysis,
-        full-run hardware, report writing and LaTeX assembly.
+  \item \textbf{Shashikanth Bokka: 40\%} --- Led the baseline reproduction
+        effort, implemented the full checkpointed pipeline, executed 3,360
+        baseline runs, documented 7 reproducibility findings, and managed the
+        Git repository. Contributed to report Sections III, IV, and V.
+        
+  \item \textbf{Radha: 30\%} --- Designed and executed Tracks A and C,
+        contributing 1,360 additional experiment runs. Implemented hyperparameter
+        sensitivity analysis and timing profiling. Generated Figures 2 and 4.
+        Contributed to report Section VI.
+        
+  \item \textbf{Ranjitha: 30\%} --- Designed and executed Track B variant
+        analysis, identified optimal ROCKET-family combinations, and generated
+        Figure 3. Contributed to report Section VI and collaborated on final
+        report assembly.
 \end{itemize}
+
+\textbf{Total Project Effort:} Approximately 120 person-hours over 5 weeks,
+including 4,720 total experiment runs producing 17.9 CPU hours of computation
+and 19.2 wall-clock hours across all tracks.
 
 \end{document}
