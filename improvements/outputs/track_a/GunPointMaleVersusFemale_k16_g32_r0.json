@@ -1,0 +1,13 @@
+{
+  "dataset": "GunPointMaleVersusFemale",
+  "resample": 0,
+  "k": 16,
+  "g": 32,
+  "accuracy": 1.0,
+  "transform_time_sec": 0.7288,
+  "fit_time_sec": 0.5423,
+  "predict_time_sec": 0.0017,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

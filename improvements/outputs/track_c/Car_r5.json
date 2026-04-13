@@ -1,0 +1,10 @@
+{
+  "dataset": "Car",
+  "resample": 5,
+  "accuracy": 0.95,
+  "transform_time_sec": 0.67617,
+  "fit_time_sec": 0.045223,
+  "predict_time_sec": 0.038136,
+  "total_time_sec": 0.759529,
+  "cv_mode": "loo"
+}

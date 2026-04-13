@@ -1,0 +1,13 @@
+{
+  "dataset": "Coffee",
+  "resample": 0,
+  "k": 16,
+  "g": 64,
+  "accuracy": 1.0,
+  "transform_time_sec": 0.4317,
+  "fit_time_sec": 0.0201,
+  "predict_time_sec": 0.0031,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

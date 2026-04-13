@@ -1,0 +1,13 @@
+{
+  "dataset": "EOGHorizontalSignal",
+  "resample": 1,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.850829,
+  "transform_time_sec": 7.8251,
+  "fit_time_sec": 0.5627,
+  "predict_time_sec": 0.004,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

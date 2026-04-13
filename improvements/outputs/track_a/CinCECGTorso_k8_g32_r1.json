@@ -1,0 +1,13 @@
+{
+  "dataset": "CinCECGTorso",
+  "resample": 1,
+  "k": 8,
+  "g": 32,
+  "accuracy": 0.994928,
+  "transform_time_sec": 11.7587,
+  "fit_time_sec": 0.0113,
+  "predict_time_sec": 0.0155,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

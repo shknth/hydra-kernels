@@ -1,0 +1,13 @@
+{
+  "dataset": "FiftyWords",
+  "resample": 2,
+  "k": 16,
+  "g": 128,
+  "accuracy": 0.848352,
+  "transform_time_sec": 7.7782,
+  "fit_time_sec": 0.6772,
+  "predict_time_sec": 0.0215,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

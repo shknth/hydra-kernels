@@ -1,0 +1,13 @@
+{
+  "dataset": "GunPointAgeSpan",
+  "resample": 2,
+  "k": 4,
+  "g": 64,
+  "accuracy": 0.987342,
+  "transform_time_sec": 0.5101,
+  "fit_time_sec": 0.5401,
+  "predict_time_sec": 0.0005,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "FacesUCR",
+  "resample": 1,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.963415,
+  "transform_time_sec": 3.2544,
+  "fit_time_sec": 0.5553,
+  "predict_time_sec": 0.0121,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

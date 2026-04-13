@@ -1,0 +1,13 @@
+{
+  "dataset": "BeetleFly",
+  "resample": 0,
+  "k": 8,
+  "g": 64,
+  "accuracy": 0.9,
+  "transform_time_sec": 0.341,
+  "fit_time_sec": 0.0091,
+  "predict_time_sec": 0.0731,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "Crop",
+  "resample": 2,
+  "k": 4,
+  "g": 32,
+  "accuracy": 0.703512,
+  "transform_time_sec": 6.416,
+  "fit_time_sec": 27.4174,
+  "predict_time_sec": 0.0979,
+  "cv_mode": "cv5",
+  "status": "ok",
+  "error": ""
+}

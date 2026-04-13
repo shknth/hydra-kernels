@@ -1,0 +1,13 @@
+{
+  "dataset": "ACSF1",
+  "resample": 1,
+  "k": 8,
+  "g": 32,
+  "accuracy": 0.8,
+  "transform_time_sec": 1.2654,
+  "fit_time_sec": 0.4882,
+  "predict_time_sec": 0.0524,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

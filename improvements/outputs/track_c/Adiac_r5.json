@@ -1,0 +1,10 @@
+{
+  "dataset": "Adiac",
+  "resample": 5,
+  "accuracy": 0.849105,
+  "transform_time_sec": 1.359717,
+  "fit_time_sec": 0.566554,
+  "predict_time_sec": 0.013372,
+  "total_time_sec": 1.939643,
+  "cv_mode": "loo"
+}

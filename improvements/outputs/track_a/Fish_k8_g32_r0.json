@@ -1,0 +1,13 @@
+{
+  "dataset": "Fish",
+  "resample": 0,
+  "k": 8,
+  "g": 32,
+  "accuracy": 0.977143,
+  "transform_time_sec": 0.8106,
+  "fit_time_sec": 0.5034,
+  "predict_time_sec": 0.0253,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

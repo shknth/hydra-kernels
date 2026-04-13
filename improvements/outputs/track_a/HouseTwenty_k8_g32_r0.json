@@ -1,0 +1,13 @@
+{
+  "dataset": "HouseTwenty",
+  "resample": 0,
+  "k": 8,
+  "g": 32,
+  "accuracy": 0.94958,
+  "transform_time_sec": 1.6431,
+  "fit_time_sec": 0.0182,
+  "predict_time_sec": 0.0598,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

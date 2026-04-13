@@ -1,0 +1,13 @@
+{
+  "dataset": "Ham",
+  "resample": 0,
+  "k": 4,
+  "g": 128,
+  "accuracy": 0.72381,
+  "transform_time_sec": 0.8793,
+  "fit_time_sec": 0.5481,
+  "predict_time_sec": 0.0005,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

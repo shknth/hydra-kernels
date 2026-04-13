@@ -1,0 +1,13 @@
+{
+  "dataset": "DistalPhalanxOutlineAgeGroup",
+  "resample": 2,
+  "k": 8,
+  "g": 128,
+  "accuracy": 0.814286,
+  "transform_time_sec": 0.787,
+  "fit_time_sec": 0.5755,
+  "predict_time_sec": 0.0015,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

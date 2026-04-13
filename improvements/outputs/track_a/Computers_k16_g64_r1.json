@@ -1,0 +1,13 @@
+{
+  "dataset": "Computers",
+  "resample": 1,
+  "k": 16,
+  "g": 64,
+  "accuracy": 0.86,
+  "transform_time_sec": 4.7102,
+  "fit_time_sec": 0.5579,
+  "predict_time_sec": 0.0038,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "Beef",
+  "resample": 3,
+  "accuracy": 0.966667,
+  "transform_time_sec": 0.408317,
+  "fit_time_sec": 0.032542,
+  "predict_time_sec": 0.007892,
+  "total_time_sec": 0.448751,
+  "cv_mode": "loo"
+}

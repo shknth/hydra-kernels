@@ -1,0 +1,13 @@
+{
+  "dataset": "InlineSkate",
+  "resample": 0,
+  "k": 4,
+  "g": 128,
+  "accuracy": 0.474545,
+  "transform_time_sec": 13.1817,
+  "fit_time_sec": 0.4943,
+  "predict_time_sec": 0.0478,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

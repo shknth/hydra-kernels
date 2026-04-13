@@ -1,0 +1,13 @@
+{
+  "dataset": "ECG200",
+  "resample": 0,
+  "k": 16,
+  "g": 32,
+  "accuracy": 0.87,
+  "transform_time_sec": 0.2906,
+  "fit_time_sec": 0.5472,
+  "predict_time_sec": 0.0008,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

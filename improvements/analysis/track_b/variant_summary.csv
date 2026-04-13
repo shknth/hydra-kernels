@@ -1,0 +1,4 @@
+variant,mean_delta,median_delta,std_delta,max_gain,max_drop,wins,ties,losses,win_rate
+Hydra+MultiRocket,0.010418,0.002024,0.035403,0.278963,-0.057532,65,6,41,0.580357
+Hydra+MiniRocket,0.008038,0.003220,0.018995,0.095778,-0.023334,69,6,37,0.616071
+Hydra+Rocket,0.006754,0.001290,0.025551,0.167407,-0.043334,61,3,48,0.544643

@@ -1,0 +1,13 @@
+{
+  "dataset": "CricketX",
+  "resample": 1,
+  "k": 4,
+  "g": 128,
+  "accuracy": 0.805128,
+  "transform_time_sec": 2.512,
+  "fit_time_sec": 0.5671,
+  "predict_time_sec": 0.0052,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

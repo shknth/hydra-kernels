@@ -1,0 +1,13 @@
+{
+  "dataset": "Earthquakes",
+  "resample": 1,
+  "k": 8,
+  "g": 64,
+  "accuracy": 0.791367,
+  "transform_time_sec": 2.277,
+  "fit_time_sec": 0.5577,
+  "predict_time_sec": 0.0015,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

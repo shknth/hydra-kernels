@@ -1,0 +1,13 @@
+{
+  "dataset": "Herring",
+  "resample": 1,
+  "k": 4,
+  "g": 128,
+  "accuracy": 0.578125,
+  "transform_time_sec": 0.7209,
+  "fit_time_sec": 0.0449,
+  "predict_time_sec": 0.0304,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}

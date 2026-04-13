@@ -1,0 +1,13 @@
+{
+  "dataset": "FreezerRegularTrain",
+  "resample": 1,
+  "k": 8,
+  "g": 128,
+  "accuracy": 0.99614,
+  "transform_time_sec": 15.3525,
+  "fit_time_sec": 0.5447,
+  "predict_time_sec": 0.0368,
+  "cv_mode": "loo",
+  "status": "ok",
+  "error": ""
+}
